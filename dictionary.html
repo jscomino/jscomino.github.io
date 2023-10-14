@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Justin Comino - Software Developer</title>
+
+    <script src="color-modes.js"></script>
+    <link rel="stylesheet" href="css@3">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="favicon/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="index.html" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img src="wreath.png" width="40" height="40" class="me-2"/>
+        <span class="fs-4">Justin S. Comino</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="quotes.html">Quotes</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="#">Dictionary</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row mb-4">
+        <h1>Dictionary</h1>
+        <p>A compendium of curious words</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>absquatulate</h5>
+            <p><i>to leave abruptly</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>adamantine</h5>
+            <p><i>unbreakable, anything that is very hard</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>agelast</h5>
+            <p><i>someone who never laughs</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>antediluvian</h5>
+            <p><i>anything that came before the great flood, or extremely old-fashioned</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>antipodean</h5>
+            <p><i>denoting something in the southern hemisphere, particularly when the speaker is in the northern hemisphere, can be used to refer to Australia</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>atelier</h5>
+            <p><i>workshop or studio used by an artist</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>blinkenlights</h5>
+            <p><i>the fun blinking lights on computers commonly seen in the 80s and prior</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>boffin</h5>
+            <p><i>someone involved in technical or scientific research, someone with abstract or arcane knowledge</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>bourse</h5>
+            <p><i>the stock market in a non-english speaking country</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>boondoggle</h5>
+            <p><i>work or activity that appears useful but is meant to simply waste money, eg Boeing</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>confabulate</h5>
+            <p><i>confusing imaginary memories with real ones, filling in the gaps</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>conflate</h5>
+            <p><i>to inappropriately confuse or relate two things together</i></p>
+            <small>note: most definitions for this word are outdated and only refer to combining text</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>coopery</h5>
+            <p><i>a business that makes wooden barrels</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>crepuscular</h5>
+            <p><i>animals that are only active at dusk and dawn</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>cromulent</h5>
+            <p><i>perfectly acceptable</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>cynosure</h5>
+            <p><i>someone that is the center of attention, a statue in the center of a room</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>defenestrate</h5>
+            <p><i>to throw someone out of a window, popularized by the russians</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>denouement</h5>
+            <p><i>the final act in a play or movie, resolution, the final say</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>diagetic</h5>
+            <p><i>describing sound that the characters in a movie can hear and react to, particularly music</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>dord</h5>
+            <p><i>no one is quite sure of the meaning of this word...</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>ebsign</h5>
+            <p><i>a flag</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>eigengrau</h5>
+            <p><i>"brain gray", this is the gray color you see when you close your eyes</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>embiggen</h5>
+            <p><i>to enlarge</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>ersatz</h5>
+            <p><i>used to describe an artificial or usually inferior subsitute for a product</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>escutcheon</h5>
+            <p><i>a coat of arms, specifically the shield</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>of the first water</h5>
+            <p><i>something of the finest quality, also used to describe brilliant diamonds</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>frisson</h5>
+            <p><i>a sudden strong feeling of excitement</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>fugue state</h5>
+            <p><i>when someone (mentally impaired) wanders from home and gets lost</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>genuflect</h5>
+            <p><i>to kneel, to show respect</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>germane</h5>
+            <p><i>something that is relevant, apropos to the topic at hand</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>gestalt</h5>
+            <p><i>anything where the whole is worth more than the sum of its parts</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>gourmand</h5>
+            <p><i>someone who takes great pleasure in eating food</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>gravaman</h5>
+            <p><i>a formal complaint or grievance</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>haruspicy</h5>
+            <p><i>divination by looking at entrails</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>heliograph</h5>
+            <p><i>a mirror used to reflect the sun as a signaling device</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>hermeneutics</h5>
+            <p><i>a rule or theory about how to interpret something</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>imbroglio</h5>
+            <p><i>confused, complicated, and embarassing situation</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>impignorate</h5>
+            <p><i>to mortgage or pawn something for money</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>imprimatur</h5>
+            <p><i>a stamp of approval, someones guarantee of a good standard</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>indicia</h5>
+            <p><i>a formal way of referring to "identifying marks" or "unique characteristics"</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>inexorable</h5>
+            <p><i>impossible to stop</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>ingenue</h5>
+            <p><i>an innocent or unsophisticated young woman</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>interrobang</h5>
+            <p><i>a question mark combined with an exclamation mark</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>lacunae</h5>
+            <p><i>an unfilled space, a gap, typically in a bone</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>lede</h5>
+            <p><i>opening paragraph of an article</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>legerdemain</h5>
+            <p><i>skillful use of one's hands when performing magic or trickery</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>lenticular</h5>
+            <p><i>shaped like an eyeball</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>Lingua Franca</h5>
+            <p><i>a 3rd language used to communicate between 2 people that speak different languages</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>littoral</h5>
+            <p><i>on or near the seashore</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>lothario</h5>
+            <p><i>a promiscuous man</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>louching</h5>
+            <p><i>describes when a clear spirit suddenly turns milky, cloudy, or opaque (such as when adding cream)</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>loxodrome</h5>
+            <p><i>a straight path on a sphere that appears curved (eg. flight paths of airplanes)</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>malapropism</h5>
+            <p><i>confusing a word in place of one another, humorously</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>manifold</h5>
+            <p><i>obviously</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>manse</h5>
+            <p><i>a house</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>millieu</h5>
+            <p><i>a persons social environment</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>natatorium</h5>
+            <p><i>swimming pool</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>nostrum</h5>
+            <p><i>ineffective medicine, particularly when prepared by an unqualified person</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>numismatic</h5>
+            <p><i>the study of physical money or currency</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>orthogonal</h5>
+            <p><i>at right angles</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>othorexea</h5>
+            <p><i>the unhealthy obsession with eating healthy</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>oubliette</h5>
+            <p><i>tall dungeon with only one hole at the top making escape impossible</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>panglossian</h5>
+            <p><i>excessively optimistic perspective</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>panopticon</h5>
+            <p><i>a circular prison with cells arranged around a central area, allowing prisoners to be observed at all times</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>pastiche</h5>
+            <p><i>an imitation of an art style</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>peculation</h5>
+            <p><i>abuse or embezzlement of public funds under your control</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>penumbra</h5>
+            <p><i>the shadow from a partial eclipse, or two shadows overlaying each other</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>phlegmatic</h5>
+            <p><i>having an unemotional and calm disposition</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>phosphene</h5>
+            <p><i>the geometric images you see when you close your eyes and apply pressure</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>phrenology</h5>
+            <p><i>outdated practice of studying the skull in relationship to intelligence</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>pig iron</h5>
+            <p><i>crude iron</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>pursy</h5>
+            <p><i>out of breath, especially a horse</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>quotidian</h5>
+            <p><i>the mundane, something part of daily life</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>rapscallion</h5>
+            <p><i>rascal</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>reconnoiter</h5>
+            <p><i>to make a military observation</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>Reducto ad Absurdum</h5>
+            <p><i>reduction to the absurd, taking an argument to its logical extreme</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>requisition</h5>
+            <p><i>an official order laying claim to something that belongs to someone else</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>retinue</h5>
+            <p><i>a group of advisors to a noble person</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>revanchism</h5>
+            <p><i>the desire to reverse loss of land incurred by a organization after a war or social movement, eg. Native Americans practice revanchism</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>revetment</h5>
+            <p><i>a barricade of sandbags</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>rime</h5>
+            <p><i>fuzzy ice that forms in rare weather circumstances, commonly seen inside a freezer</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>salubrious</h5>
+            <p><i>healthy, or something that makes you healthy</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>sarcopenia</h5>
+            <p><i>loss of muscle with old age</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>sequela</h5>
+            <p><i>the condition leftover from a disease or injury, eg scars, poor lung function</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>skeumorphic</h5>
+            <p><i>software design that mimics physical design, commonly seen in Apple products</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>skinflint</h5>
+            <p><i>someone who spends as little money as possible</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>sobriquet</h5>
+            <p><i>a nickname</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>sophistry</h5>
+            <p><i>intellectual sounding but ultimately fallacious arguments intended to deceive, pure bunk</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>splendiferous</h5>
+            <p><i>exceedingly fantastic</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>spondulix</h5>
+            <p><i>spending money</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>spoor</h5>
+            <p><i>tracks left by an animal</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>styptic</h5>
+            <p><i>(of a substance) something that stops bleeding when applied to a wound, commonly used for shaving cuts</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>subsudence</h5>
+            <p><i>settling / collapsing above ground from underground mines</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>scyophant</h5>
+            <p><i>someone who acts lowly to someone else in order to gain advantage, someone who embarrasses themselves to gain influence</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>tabula rasa</h5>
+            <p><i>a blank slate, an absence of any preconceived ideas</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>tautology</h5>
+            <p><i>saying the same thing twice in different words, repeating something in another way, generally regarded as a logical fallacy</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>truism</h5>
+            <p><i>a statement that is obviously true and contributes zero value to a conversation, something intellectual sounding but vacuous</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>terroir</h5>
+            <p><i>the soil and environment that contributed to a wines unique flavor</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>tittivate</h5>
+            <p><i>to decorate, make better</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>triptych</h5>
+            <p><i>a painting divided into 3 sections</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>triumvirate</h5>
+            <p><i>a group of 3 men sharing power, as in ancient Rome</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>truculant</h5>
+            <p><i>eager to argue</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>ullage</h5>
+            <p><i>the empty amount in a container of liquid, or the evaporation of liquid</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>ultracrepidarian</h5>
+            <p><i>expressing opinions on matters that are outside your scope of expertise, out of one's depth</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>umwelt</h5>
+            <p><i>how an organism experiences its environment through its sensory organs</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>variolation</h5>
+            <p><i>primitive form of vaccination where dried scabs from smallpox are crushed and rubbed into scratched skin</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5></h5>
+            <p><i></i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>verdigris</h5>
+            <p><i>copper patina</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>Voir Dire</h5>
+            <p><i>cross-examination of witnesses in a court room</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>vugg</h5>
+            <p><i>the cavity in a rock, like a geode</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>xertz</h5>
+            <p><i>to greedily gulp something</i></p>
+        </div>
+        <div class="col-sm-6">
+            <h5>zeitgeist</h5>
+            <p><i>the ideas and beliefs of a particular time period</i></p>
+        </div>
+    </div>
+  </div>
